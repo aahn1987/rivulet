@@ -1,0 +1,17 @@
+<?php
+
+namespace {{namespace}};
+
+use Rivulet\Middleware\Middleware;
+use Rivulet\Http\Request;
+use Rivulet\Http\Response;
+
+class {{class}} extends Middleware
+{
+    public function handle(Request $request, \Closure $next)
+    {
+        // Middleware logic here
+        
+        return $next($request);
+    }
+}

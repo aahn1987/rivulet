@@ -1,0 +1,107 @@
+{
+  "name": "rivulet/framework",
+  "description": "Rivulet - A modern, fast, and lightweight PHP API framework built for PHP 8.3+",
+  "type": "project",
+  "license": "MIT",
+  "keywords": [
+    "framework",
+    "php",
+    "api",
+    "rest",
+    "micro",
+    "lightweight",
+    "fast"
+  ],
+  "version": "1.0.0",
+  "homepage": "https://rivulet-framework.com",
+  "authors": [
+    {
+      "name": "Rivulet Framework Team",
+      "email": "team@rivulet-framework.com",
+      "homepage": "https://rivulet-framework.com",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "support@rivulet-framework.com",
+    "issues": "https://github.com/rivulet/framework/issues",
+    "forum": "https://github.com/rivulet/framework/discussions",
+    "wiki": "https://github.com/rivulet/framework/wiki",
+    "docs": "https://docs.rivulet-framework.com",
+    "source": "https://github.com/rivulet/framework"
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/rivulet"
+    },
+    {
+      "type": "opencollective",
+      "url": "https://opencollective.com/rivulet"
+    }
+  ],
+  "require": {
+    "php": ">=8.3",
+    "ext-json": "*",
+    "ext-pdo": "*",
+    "ext-curl": "*",
+    "ext-openssl": "*",
+    "ext-mbstring": "*",
+    "ext-redis": "*",
+    "ext-zip": "*",
+    "vlucas/phpdotenv": "^5.6",
+    "predis/predis": "^2.0",
+    "dragonmantank/cron-expression": "^3.3",
+    "php-amqplib/php-amqplib": "^3.5",
+    "cboden/ratchet": "^0.4.4",
+    "react/socket": "^1.14"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.0",
+    "fakerphp/faker": "^1.23",
+    "mockery/mockery": "^1.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Rivulet\\": "core/",
+      "App\\": "app/"
+    },
+    "files": [
+      "core/Support/Helpers.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "bin": [
+    "luna"
+  ],
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "allow-plugins": {
+      "php-http/discovery": true
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "scripts": {
+    "post-root-package-install": [
+      "@php -r \"copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+      "@php luna key:generate",
+      "@php luna storage:link"
+    ],
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  },
+  "extra": {
+    "laravel": {
+      "dont-discover": []
+    }
+  }
+}

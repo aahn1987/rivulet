@@ -1,0 +1,19 @@
+<?php
+
+namespace {{namespace}};
+
+use Rivulet\Validation\Rules\Rule;
+
+class {{class}}
+{
+    public function passes($value): bool
+    {
+        // Validation logic
+        return true;
+    }
+
+    public function message(): string
+    {
+        return 'The validation error message.';
+    }
+}

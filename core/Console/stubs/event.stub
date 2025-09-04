@@ -1,0 +1,13 @@
+<?php
+
+namespace {{namespace}};
+
+use Rivulet\Events\Event;
+
+class {{class}} extends Event
+{
+    public function __construct(array $data = [])
+    {
+        parent::__construct('{{class}}', $data);
+    }
+}

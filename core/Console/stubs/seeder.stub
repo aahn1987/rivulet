@@ -1,0 +1,19 @@
+<?php
+
+namespace Database\Seeders;
+
+use Rivulet\Database\Connection;
+
+class {{class}}
+{
+    public function run(): void
+    {
+        $data = [
+            // Add your seed data here
+        ];
+
+        foreach ($data as $row) {
+            // Insert data into database
+        }
+    }
+}

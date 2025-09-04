@@ -1,0 +1,22 @@
+<?php
+
+namespace {{namespace}};
+
+use Rivulet\Model;
+
+class {{class}} extends Model
+{
+    protected string $table = '{{table}}';
+    
+    protected array $fillable = [
+        //
+    ];
+    
+    protected array $hidden = [
+        //
+    ];
+    
+    protected array $casts = [
+        //
+    ];
+}

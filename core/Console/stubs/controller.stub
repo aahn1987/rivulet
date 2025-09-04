@@ -1,0 +1,46 @@
+<?php
+
+namespace {{namespace}};
+
+use Rivulet\Controller;
+use Rivulet\Http\Request;
+use Rivulet\Http\Response;
+
+class {{class}} extends Controller
+{
+    public function index(Request $request): Response
+    {
+        // List all records
+        return response()->json(['message' => 'Index method']);
+    }
+
+    public function show(Request $request, $id): Response
+    {
+        // Show single record
+        return response()->json(['message' => 'Show method', 'id' => $id]);
+    }
+
+    public function store(Request $request): Response
+    {
+        // Create new record
+        return response()->json(['message' => 'Store method']);
+    }
+
+    public function update(Request $request, $id): Response
+    {
+        // Update record
+        return response()->json(['message' => 'Update method', 'id' => $id]);
+    }
+
+    public function delete(Request $request, $id): Response
+    {
+        // Soft delete record
+        return response()->json(['message' => 'Delete method', 'id' => $id]);
+    }
+
+    public function destroy(Request $request, $id): Response
+    {
+        // Permanent delete record
+        return response()->json(['message' => 'Destroy method', 'id' => $id]);
+    }
+}

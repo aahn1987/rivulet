@@ -1,0 +1,20 @@
+<?php
+
+use Rivulet\Database\Migrations\Migration;
+use Rivulet\Database\Connection;
+
+class {{class}} extends Migration
+{
+    public function up(): void
+    {
+        $this->createTable('{{table}}', function($table) {
+            $table->id();
+            $table->timestamps();
+        });
+    }
+
+    public function down(): void
+    {
+        $this->dropTable('{{table}}');
+    }
+}
