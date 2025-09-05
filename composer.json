@@ -12,7 +12,7 @@
     "lightweight",
     "fast"
   ],
-  "version": "1.0.0",
+  "version": "2.0.0",
   "homepage": "https://rivulet-framework.com",
   "authors": [
     {
@@ -23,23 +23,13 @@
     }
   ],
   "support": {
-    "email": "support@rivulet-framework.com",
-    "issues": "https://github.com/rivulet/framework/issues",
-    "forum": "https://github.com/rivulet/framework/discussions",
-    "wiki": "https://github.com/rivulet/framework/wiki",
+    "email": "aahn87@proton.me",
+    "issues": "https://github.com/aahn1987/rivulet/issues",
+    "forum": "https://github.com/aahn1987/rivulet/discussions",
+    "wiki": "https://github.com/aahn1987/rivulet/wiki",
     "docs": "https://docs.rivulet-framework.com",
-    "source": "https://github.com/rivulet/framework"
+    "source": "https://github.com/aahn1987/rivulet"
   },
-  "funding": [
-    {
-      "type": "github",
-      "url": "https://github.com/sponsors/rivulet"
-    },
-    {
-      "type": "opencollective",
-      "url": "https://opencollective.com/rivulet"
-    }
-  ],
   "require": {
     "php": ">=8.3",
     "ext-json": "*",
