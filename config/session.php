@@ -10,7 +10,7 @@ return [
 
     'encrypt'         => env('SESSION_ENCRYPT', false),
 
-    'files'           => env('SESSION_FILES_PATH', storage_path('sessions')),
+    'files'           => env('SESSION_FILES_PATH', storageLocation('sessions')),
 
     'connection'      => env('SESSION_CONNECTION', null),
 

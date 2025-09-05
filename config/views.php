@@ -3,10 +3,10 @@
 return [
 
     'paths'      => [
-        resource_path('views'),
+        resourceLocation('views'),
     ],
 
-    'compiled'   => env('VIEW_COMPILED_PATH', storage_path('framework/views')),
+    'compiled'   => env('VIEW_COMPILED_PATH', storageLocation('framework/views')),
 
     'extensions' => [
         'html',

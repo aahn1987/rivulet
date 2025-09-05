@@ -7,7 +7,7 @@ class FileDriver
 
     public function __construct(array $config = [])
     {
-        $this->path = $config['path'] ?? storage_path('cache');
+        $this->path = $config['path'] ?? storageLocation('cache');
 
         if (! is_dir($this->path)) {
             mkdir($this->path, 0755, true);

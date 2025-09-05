@@ -13,7 +13,7 @@ class ConfigCacheCommand extends Command
         $this->info('Caching configuration...');
 
         $configPath = basePath('config');
-        $cachePath  = storage_path('framework/cache');
+        $cachePath  = storageLocation('framework/cache');
 
         if (! is_dir($cachePath)) {
             mkdir($cachePath, 0755, true);

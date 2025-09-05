@@ -236,7 +236,7 @@ class Filesystem
 
     public function path(string $path): string
     {
-        return public_path($path);
+        return publicLocation($path);
     }
 
     public function temporaryUrl(string $path, int $expiration): string

@@ -12,7 +12,7 @@ class ConfigClearCommand extends Command
     {
         $this->info('Clearing configuration cache…');
 
-        $file = storage_path('framework/cache/config.php');
+        $file = storageLocation('framework/cache/config.php');
         if (file_exists($file)) {
             unlink($file);
             $this->success('Configuration cache cleared.');

@@ -28,7 +28,7 @@ class CacheServiceProvider extends ServiceProvider
             'stores'  => [
                 'file'  => [
                     'driver' => 'file',
-                    'path'   => config('cache.path', storage_path('cache')),
+                    'path'   => config('cache.path', storageLocation('cache')),
                 ],
                 'redis' => [
                     'driver'     => 'redis',

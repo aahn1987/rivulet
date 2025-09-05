@@ -18,7 +18,7 @@ class Logs
 
     public function __construct()
     {
-        $this->logPath  = storage_path('logs/rivulet.log');
+        $this->logPath  = storageLocation('logs/rivulet.log');
         $this->logLevel = env('LOG_LEVEL', 'debug');
     }
 

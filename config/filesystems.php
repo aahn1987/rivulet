@@ -6,19 +6,19 @@ return [
     'disks'   => [
         'local'   => [
             'driver' => 'local',
-            'root'   => storage_path('app'),
+            'root'   => storageLocation('app'),
         ],
 
         'public'  => [
             'driver'     => 'local',
-            'root'       => public_path('storage'),
+            'root'       => publicLocation('storage'),
             'url'        => env('APP_URL') . '/storage',
             'visibility' => 'public',
         ],
 
         'uploads' => [
             'driver'     => 'local',
-            'root'       => storage_path('uploads'),
+            'root'       => storageLocation('uploads'),
             'url'        => env('APP_URL') . '/storage/uploads',
             'visibility' => 'public',
         ],
@@ -39,13 +39,13 @@ return [
             'key_file'     => env('GOOGLE_CLOUD_KEY_FILE'),
             'project_id'   => env('GOOGLE_CLOUD_PROJECT_ID'),
             'bucket'       => env('GOOGLE_CLOUD_STORAGE_BUCKET'),
-            'path_prefix'  => env('GOOGLE_CLOUD_STORAGE_PATH_PREFIX', ''),
+            'path_prefix'  => env('GOOGLE_CLOUD_storageLocation_PREFIX', ''),
             'api_endpoint' => env('GOOGLE_CLOUD_STORAGE_API_URI', null),
         ],
     ],
 
     'links'   => [
-        public_path('storage') => storage_path('app/public'),
-        public_path('uploads') => storage_path('uploads'),
+        publicLocation('storage') => storageLocation('app/public'),
+        publicLocation('uploads') => storageLocation('uploads'),
     ],
 ];

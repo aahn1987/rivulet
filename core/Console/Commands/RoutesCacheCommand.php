@@ -13,7 +13,7 @@ class RoutesCacheCommand extends Command
     {
         $this->info('Caching routes…');
 
-        $cacheDir = storage_path('framework/cache');
+        $cacheDir = storageLocation('framework/cache');
         if (! is_dir($cacheDir)) {
             mkdir($cacheDir, 0755, true);
         }

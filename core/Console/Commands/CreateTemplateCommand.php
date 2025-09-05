@@ -25,7 +25,7 @@ class CreateTemplateCommand extends Command
             'title' => $this->studlyCase($parsed['class']),
         ]);
 
-        $path = resource_path('views/' . $parsed['path'] . '/' . $fileName);
+        $path = resourceLocation('views/' . $parsed['path'] . '/' . $fileName);
 
         if ($this->createFile($path, $content)) {
             $this->success("Template {$fileName} created successfully at {$path}");

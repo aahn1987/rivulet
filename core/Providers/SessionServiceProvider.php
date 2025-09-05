@@ -30,7 +30,7 @@ class SessionServiceProvider extends ServiceProvider
             'domain'    => config('session.domain'),
             'secure'    => config('session.secure', false),
             'http_only' => config('session.http_only', true),
-            'files'     => config('session.files', storage_path('sessions')),
+            'files'     => config('session.files', storageLocation('sessions')),
         ];
 
         $session = $this->make('session');

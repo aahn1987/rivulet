@@ -12,7 +12,7 @@ class RoutesClearCommand extends Command
     {
         $this->info('Clearing route cache…');
 
-        $file = storage_path('framework/cache/routes.cache');
+        $file = storageLocation('framework/cache/routes.cache');
         if (file_exists($file)) {
             unlink($file);
             $this->success('Route cache cleared.');

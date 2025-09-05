@@ -12,8 +12,8 @@ class StorageLinkCommand extends Command
     {
         $this->info('Creating storage symbolic links...');
 
-        $publicPath  = public_path();
-        $storagePath = storage_path();
+        $publicPath  = publicLocation();
+        $storagePath = storageLocation();
 
         $links = [
             'storage' => $storagePath . '/uploads',

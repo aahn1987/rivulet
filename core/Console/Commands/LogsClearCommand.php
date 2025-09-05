@@ -12,7 +12,7 @@ class LogsClearCommand extends Command
     {
         $this->info('Clearing logs...');
 
-        $logPath = storage_path('logs');
+        $logPath = storageLocation('logs');
 
         if (is_dir($logPath)) {
             $files = glob($logPath . '/*.log');

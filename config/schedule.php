@@ -6,11 +6,11 @@ return [
 
     'mutex'    => [
         'driver' => 'file',
-        'path'   => storage_path('framework/schedule-mutex'),
+        'path'   => storageLocation('framework/schedule-mutex'),
     ],
 
     'output'   => [
-        'path' => storage_path('logs/schedule.log'),
+        'path' => storageLocation('logs/schedule.log'),
     ],
 
 ];

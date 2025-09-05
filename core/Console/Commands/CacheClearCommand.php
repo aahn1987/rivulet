@@ -12,7 +12,7 @@ class CacheClearCommand extends Command
     {
         $this->info('Clearing cache...');
 
-        $cachePath = storage_path('cache');
+        $cachePath = storageLocation('cache');
 
         if (is_dir($cachePath)) {
             $this->deleteDirectory($cachePath);

@@ -11,7 +11,7 @@ class Engine
 
     public function __construct(string $templatePath = null)
     {
-        $this->templatePath = $templatePath ?? resource_path('views');
+        $this->templatePath = $templatePath ?? resourceLocation('views');
     }
 
     public function render(string $template, array $data = []): string

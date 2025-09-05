@@ -11,7 +11,7 @@ class FileSessionDriver implements SessionDriverInterface
 
     public function __construct(array $config)
     {
-        $this->path = $config['files'] ?? storage_path('sessions');
+        $this->path = $config['files'] ?? storageLocation('sessions');
 
         if (! is_dir($this->path)) {
             mkdir($this->path, 0755, true);
